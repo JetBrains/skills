@@ -20,6 +20,7 @@ on:
       - ".scripts/run-skill-scanner.sh"
 
 permissions:
+  actions: read
   contents: read
   security-events: write
 
@@ -47,8 +48,8 @@ jobs:
             --fail-on-severity high
 
       - name: Upload SARIF to GitHub Code Scanning
-        if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@v3
+        if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) }}
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: .reports/skill-scanner/results.sarif
 

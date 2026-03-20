@@ -5,7 +5,7 @@ license: MIT
 metadata:
     author: SerKo <https://github.com/serkodev>
     version: "1.0"
-  source: https://github.com/antfu/skills/tree/main/skills/vueuse-functions
+    source: https://github.com/antfu/skills/tree/main/skills/vueuse-functions
 compatibility: Requires Vue 3 (or above) or Nuxt 3 (or above) project
 ---
 
