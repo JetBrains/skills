@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upgrade & Breaking Changes"
+  short_description: "Plan risky platform upgrades safely"
+  default_prompt: "Use $upgrade-breaking-change-navigator to plan this Spring, Kotlin, or Gradle upgrade with minimal risk."

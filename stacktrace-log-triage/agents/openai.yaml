@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stacktrace & Log Triage"
+  short_description: "Diagnose Spring/Kotlin failures fast"
+  default_prompt: "Use $stacktrace-log-triage to analyze this Spring/Kotlin stack trace and propose the minimal safe fix."

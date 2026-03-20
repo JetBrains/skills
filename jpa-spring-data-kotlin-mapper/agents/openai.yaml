@@ -1,0 +1,4 @@
+interface:
+  display_name: "JPA/Spring Data Kotlin Mapper"
+  short_description: "Model Kotlin persistence correctly"
+  default_prompt: "Use $jpa-spring-data-kotlin-mapper to design safe Kotlin JPA mappings and diagnose ORM/query issues."

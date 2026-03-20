@@ -1,0 +1,4 @@
+interface:
+  display_name: "Error Model & Validation Architect"
+  short_description: "Design safe and consistent API errors"
+  default_prompt: "Use $error-model-validation-architect to design a consistent validation and error-handling strategy for this API."

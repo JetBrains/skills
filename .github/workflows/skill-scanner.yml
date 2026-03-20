@@ -1,0 +1,65 @@
+name: Skill Scanner
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**/SKILL.md"
+      - "README.md"
+      - ".github/workflows/skill-scanner.yml"
+      - ".gitignore"
+      - ".scripts/run-skill-scanner.sh"
+  push:
+    branches:
+      - main
+    paths:
+      - "**/SKILL.md"
+      - "README.md"
+      - ".github/workflows/skill-scanner.yml"
+      - ".gitignore"
+      - ".scripts/run-skill-scanner.sh"
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run skill scanner
+        id: scan
+        continue-on-error: true
+        run: |
+          chmod +x ./.scripts/run-skill-scanner.sh
+          ./.scripts/run-skill-scanner.sh \
+            --format sarif \
+            --output .reports/skill-scanner/results.sarif \
+            --fail-on-severity high
+
+      - name: Upload SARIF to GitHub Code Scanning
+        if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' }}
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: .reports/skill-scanner/results.sarif
+
+      - name: Upload scanner artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: skill-scanner-results
+          path: .reports/skill-scanner/
+          if-no-files-found: ignore
+
+      - name: Fail workflow on scanner findings
+        if: ${{ steps.scan.outcome == 'failure' }}
+        run: exit 1

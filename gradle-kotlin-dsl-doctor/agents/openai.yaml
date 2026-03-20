@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gradle Kotlin DSL Doctor"
+  short_description: "Repair Kotlin/Spring builds safely"
+  default_prompt: "Use $gradle-kotlin-dsl-doctor to fix this Gradle Kotlin DSL problem with minimal, compatible build changes."

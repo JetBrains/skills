@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Incident Responder"
+  short_description: "Mitigate incidents before deep diagnosis"
+  default_prompt: "Use $production-incident-responder to guide mitigation and diagnosis for this production incident."

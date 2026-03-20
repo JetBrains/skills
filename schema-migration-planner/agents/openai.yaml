@@ -1,0 +1,4 @@
+interface:
+  display_name: "Schema Migration Planner"
+  short_description: "Evolve schemas without breaking deploys"
+  default_prompt: "Use $schema-migration-planner to plan a safe zero-downtime schema migration for this change."

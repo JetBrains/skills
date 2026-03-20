@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transaction & Consistency Designer"
+  short_description: "Place safe transaction boundaries"
+  default_prompt: "Use $transaction-consistency-designer to design transaction boundaries, idempotency, and consistency for this workflow."

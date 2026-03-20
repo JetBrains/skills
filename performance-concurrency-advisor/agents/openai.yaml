@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance & Concurrency Advisor"
+  short_description: "Diagnose bottlenecks with real signals"
+  default_prompt: "Use $performance-concurrency-advisor to analyze this performance or concurrency issue in a Kotlin Spring service."

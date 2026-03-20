@@ -1,0 +1,4 @@
+interface:
+  display_name: "Observability Integrator"
+  short_description: "Design metrics, logs, and tracing well"
+  default_prompt: "Use $observability-integrator to design observability for this Kotlin Spring service."

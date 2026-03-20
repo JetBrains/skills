@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dependency Conflict Resolver"
+  short_description: "Untangle Gradle classpath conflicts"
+  default_prompt: "Use $dependency-conflict-resolver to resolve this Gradle or Spring dependency conflict safely."

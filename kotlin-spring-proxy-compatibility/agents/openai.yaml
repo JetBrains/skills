@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin-Spring Proxy Compatibility"
+  short_description: "Prevent final/proxy/AOP runtime traps"
+  default_prompt: "Use $kotlin-spring-proxy-compatibility to check why this Kotlin/Spring AOP annotation is not taking effect."

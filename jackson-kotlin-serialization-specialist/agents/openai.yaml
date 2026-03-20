@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jackson + Kotlin Serialization"
+  short_description: "Fix Kotlin JSON edge cases safely"
+  default_prompt: "Use $jackson-kotlin-serialization-specialist to diagnose and fix this Kotlin plus Jackson serialization problem."

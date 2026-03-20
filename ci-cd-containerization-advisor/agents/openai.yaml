@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI/CD & Containerization Advisor"
+  short_description: "Ship Spring apps reliably and repeatably"
+  default_prompt: "Use $ci-cd-containerization-advisor to design a safe build, image, and deployment pipeline for this Spring service."

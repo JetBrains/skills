@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kotlin Refactorer (Spring-Aware)"
+  short_description: "Refactor Kotlin without breaking Spring"
+  default_prompt: "Use $kotlin-idiomatic-refactorer-spring-aware to refactor this Kotlin code while preserving Spring behavior."

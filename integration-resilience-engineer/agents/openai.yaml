@@ -1,0 +1,4 @@
+interface:
+  display_name: "Integration & Resilience Engineer"
+  short_description: "Harden clients, retries, and messaging"
+  default_prompt: "Use $integration-resilience-engineer to design a resilient integration with safe retries, timeouts, and failure handling."

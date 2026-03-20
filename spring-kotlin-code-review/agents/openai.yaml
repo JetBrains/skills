@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring + Kotlin Code Review"
+  short_description: "Review PRs for Spring-specific risks"
+  default_prompt: "Use $spring-kotlin-code-review to review this Kotlin/Spring change for behavioral, transactional, security, and testing risks."

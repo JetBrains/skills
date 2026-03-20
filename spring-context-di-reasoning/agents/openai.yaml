@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Context & DI Reasoning"
+  short_description: "Resolve bean graph and context failures"
+  default_prompt: "Use $spring-context-di-reasoning to diagnose this Spring context startup failure and find the minimal bean/config fix."

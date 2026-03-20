@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring MVC/WebFlux API Builder"
+  short_description: "Generate correct Kotlin API layers"
+  default_prompt: "Use $spring-mvc-webflux-api-builder to design and generate an idiomatic Kotlin Spring endpoint with validation and error handling."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Domain Decomposition & API Design"
+  short_description: "Decompose scope before code exists"
+  default_prompt: "Use $domain-decomposition-api-design-advisor to decompose this feature and design bounded contexts and API contracts."

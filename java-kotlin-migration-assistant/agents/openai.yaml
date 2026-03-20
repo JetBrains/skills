@@ -1,0 +1,4 @@
+interface:
+  display_name: "Java to Kotlin Migration"
+  short_description: "Migrate safely without semantic drift"
+  default_prompt: "Use $java-kotlin-migration-assistant to migrate this Java Spring code to Kotlin without breaking behavior."

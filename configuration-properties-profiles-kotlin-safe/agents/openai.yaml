@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configuration & Profiles"
+  short_description: "Make Kotlin Spring config predictable"
+  default_prompt: "Use $configuration-properties-profiles-kotlin-safe to fix this Spring configuration binding or profile problem."

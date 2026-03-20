@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spring Security Configurator"
+  short_description: "Build and audit secure filter chains"
+  default_prompt: "Use $spring-security-configurator-auditor to design or audit this Spring Security configuration."

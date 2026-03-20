@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Context Ingestion"
+  short_description: "Map Kotlin/Spring repo before acting"
+  default_prompt: "Use $project-context-ingestion to inspect this Kotlin/Spring repository and summarize the constraints before proposing changes."
