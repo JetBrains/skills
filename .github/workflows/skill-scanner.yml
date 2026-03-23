@@ -10,7 +10,6 @@ on:
       - ".gitignore"
       - ".scripts/run-skill-scanner.sh"
       - ".scripts/process-skill-scanner-sarif.py"
-      - ".skill-scanner-allowlist.json"
   push:
     branches:
       - main
@@ -21,7 +20,6 @@ on:
       - ".gitignore"
       - ".scripts/run-skill-scanner.sh"
       - ".scripts/process-skill-scanner-sarif.py"
-      - ".skill-scanner-allowlist.json"
 
 permissions:
   actions: read
@@ -61,7 +59,6 @@ jobs:
         run: |
           python ./.scripts/process-skill-scanner-sarif.py \
             --input .reports/skill-scanner/results.sarif \
-            --allowlist .skill-scanner-allowlist.json \
             --summary .reports/skill-scanner/summary.md \
             --status .reports/skill-scanner/status.json \
             --blocking-sarif .reports/skill-scanner/blocking-results.sarif
@@ -71,7 +68,7 @@ jobs:
 
           status = json.loads(Path(".reports/skill-scanner/status.json").read_text())
           print(f"blocking_count={status['blocking_count']}")
-          print(f"allowlisted_count={status['allowlisted_count']}")
+          print(f"blocking_error_count={status['blocking_error_count']}")
           PY
           tee -a "$GITHUB_STEP_SUMMARY" < .reports/skill-scanner/summary.md
 
@@ -103,12 +100,21 @@ jobs:
           print(status["blocking_count"])
           PY
             )
+            blocking_error_count=$(python - <<'PY'
+          import json
+          from pathlib import Path
+
+          status = json.loads(Path(".reports/skill-scanner/status.json").read_text())
+          print(status["blocking_error_count"])
+          PY
+            )
           else
             blocking_count=""
+            blocking_error_count=""
           fi
 
-          if [[ -n "$blocking_count" && "$blocking_count" != "0" ]]; then
-            echo "skill-scanner found $blocking_count blocking finding(s)." >&2
+          if [[ -n "$blocking_error_count" && "$blocking_error_count" != "0" ]]; then
+            echo "skill-scanner found $blocking_error_count blocking error finding(s)." >&2
             echo "----- skill-scanner summary -----" >&2
             cat .reports/skill-scanner/summary.md >&2
             echo "----- end skill-scanner summary -----" >&2
@@ -122,5 +128,8 @@ jobs:
           fi
 
           if [[ "$scan_exit" != "0" ]]; then
-            echo "skill-scanner exited with code $scan_exit, but all current findings matched the allowlist." >&2
+            echo "skill-scanner exited with code $scan_exit, but no error-level findings remain." >&2
+            if [[ -n "$blocking_count" && "$blocking_count" != "0" ]]; then
+              echo "Non-blocking warnings/notes remain; see the uploaded summary artifact for details." >&2
+            fi
           fi

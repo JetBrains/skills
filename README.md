@@ -26,9 +26,8 @@ CI:
 
 - `.github/workflows/skill-scanner.yml` runs the Cisco `skill-scanner` on push, pull request, and manual dispatch
 - the workflow stores the full scan output as an artifact
-- `.skill-scanner-allowlist.json` tracks accepted upstream false positives; CI still uploads the raw report artifact and only ignores the explicitly allowlisted findings
 - SARIF upload to GitHub Code Scanning is best-effort and only succeeds when GitHub Code Security is enabled for the repository
-- the workflow fails when the processed report still contains non-allowlisted findings at `high` severity or above
+- the workflow fails when the processed report still contains error-level findings
 
 ## Skills
 

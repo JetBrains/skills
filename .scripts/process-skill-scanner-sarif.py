@@ -17,7 +17,6 @@ LEVEL_ORDER = {"error": 0, "warning": 1, "note": 2, "none": 3}
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Normalize and summarize skill-scanner SARIF output.")
     parser.add_argument("--input", required=True, help="Path to the input SARIF file")
-    parser.add_argument("--allowlist", required=True, help="Path to the allowlist JSON file")
     parser.add_argument("--summary", required=True, help="Path to the summary markdown output")
     parser.add_argument("--status", required=True, help="Path to the status JSON output")
     parser.add_argument("--blocking-sarif", required=True, help="Path to the filtered blocking SARIF output")
@@ -113,51 +112,6 @@ def message_for(result: dict[str, Any]) -> str:
     return " ".join(str(text).split())
 
 
-def load_allowlist(path: Path) -> list[dict[str, Any]]:
-    payload = load_json(path)
-    if isinstance(payload, dict):
-        rules = payload.get("rules")
-        if isinstance(rules, list):
-            return [rule for rule in rules if isinstance(rule, dict)]
-    if isinstance(payload, list):
-        return [rule for rule in payload if isinstance(rule, dict)]
-    return []
-
-
-def matches_allowlist(entry: dict[str, Any], rule_id: str, level: str, uri: str, message: str) -> bool:
-    if entry.get("rule_id") != rule_id:
-        return False
-    expected_level = entry.get("level")
-    if expected_level and expected_level != level:
-        return False
-    expected_uri = entry.get("uri")
-    if expected_uri and expected_uri != uri:
-        return False
-    uri_contains = entry.get("uri_contains")
-    if uri_contains and uri_contains not in uri:
-        return False
-    uri_suffix = entry.get("uri_suffix")
-    if uri_suffix and not uri.endswith(uri_suffix):
-        return False
-    message_contains = entry.get("message_contains")
-    if message_contains and message_contains not in message:
-        return False
-    return True
-
-
-def find_allowlist_match(
-    allowlist: list[dict[str, Any]],
-    rule_id: str,
-    level: str,
-    uri: str,
-    message: str,
-) -> dict[str, Any] | None:
-    for entry in allowlist:
-        if matches_allowlist(entry, rule_id, level, uri, message):
-            return entry
-    return None
-
-
 def result_sort_key(record: dict[str, Any]) -> tuple[int, str, str, int]:
     return (
         LEVEL_ORDER.get(record["level"], 99),
@@ -171,38 +125,28 @@ def write_summary(
     path: Path,
     all_records: list[dict[str, Any]],
     blocking_records: list[dict[str, Any]],
-    allowlisted_records: list[dict[str, Any]],
 ) -> None:
     lines: list[str] = []
     all_levels = Counter(record["level"] for record in all_records)
     blocking_levels = Counter(record["level"] for record in blocking_records)
-    allowlisted_levels = Counter(record["level"] for record in allowlisted_records)
+    blocking_error_records = [record for record in blocking_records if record["level"] == "error"]
     blocking_rules = Counter(record["rule_id"] for record in blocking_records)
-    allowlisted_rules = Counter(record["rule_id"] for record in allowlisted_records)
 
     lines.append("## Skill Scanner Summary")
     lines.append("")
     lines.append(f"- Total results: {len(all_records)}")
     lines.append(f"- Blocking results: {len(blocking_records)}")
-    lines.append(f"- Allowlisted results: {len(allowlisted_records)}")
+    lines.append(f"- Blocking error results: {len(blocking_error_records)}")
     for level in ("error", "warning", "note", "none"):
         if all_levels.get(level):
             lines.append(f"- total {level}: {all_levels[level]}")
     for level in ("error", "warning", "note", "none"):
         if blocking_levels.get(level):
             lines.append(f"- blocking {level}: {blocking_levels[level]}")
-    for level in ("error", "warning", "note", "none"):
-        if allowlisted_levels.get(level):
-            lines.append(f"- allowlisted {level}: {allowlisted_levels[level]}")
 
     if blocking_rules:
         lines.extend(["", "### Top Blocking Rule IDs", "", "| Rule | Count |", "| --- | ---: |"])
         for rule_id, count in blocking_rules.most_common(10):
-            lines.append(f"| `{rule_id}` | {count} |")
-
-    if allowlisted_rules:
-        lines.extend(["", "### Top Allowlisted Rule IDs", "", "| Rule | Count |", "| --- | ---: |"])
-        for rule_id, count in allowlisted_rules.most_common(10):
             lines.append(f"| `{rule_id}` | {count} |")
 
     if blocking_records:
@@ -212,16 +156,7 @@ def write_summary(
             lines.append(f"{index}. [{record['level']}] `{record['rule_id']}` at `{location}`")
             lines.append(f"   {record['message']}")
     else:
-        lines.extend(["", "### Blocking Findings", "", "No blocking findings remain after applying the allowlist."])
-
-    if allowlisted_records:
-        lines.extend(["", f"### Allowlisted Findings ({min(10, len(allowlisted_records))})", ""])
-        for index, record in enumerate(sorted(allowlisted_records, key=result_sort_key)[:10], start=1):
-            location = f"{record['uri']}:{record['line']}" if record["line"] else record["uri"]
-            lines.append(f"{index}. [{record['level']}] `{record['rule_id']}` at `{location}`")
-            if record["allowlist_reason"]:
-                lines.append(f"   Reason: {record['allowlist_reason']}")
-            lines.append(f"   {record['message']}")
+        lines.extend(["", "### Blocking Findings", "", "No blocking findings remain."])
 
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -229,13 +164,11 @@ def write_summary(
 def main() -> int:
     args = parse_args()
     input_path = Path(args.input)
-    allowlist_path = Path(args.allowlist)
     summary_path = Path(args.summary)
     status_path = Path(args.status)
     blocking_sarif_path = Path(args.blocking_sarif)
 
     data = load_json(input_path)
-    allowlist = load_allowlist(allowlist_path)
     workspace = os.path.normpath(os.environ.get("GITHUB_WORKSPACE") or str(input_path.resolve().parents[2]))
 
     all_records: list[dict[str, Any]] = []
@@ -254,35 +187,29 @@ def main() -> int:
             level = str(result.get("level", "warning"))
             rule_id = str(result.get("ruleId", "(unknown-rule)"))
             message = message_for(result)
-            allowlist_entry = find_allowlist_match(allowlist, rule_id, level, uri, message)
             record = {
                 "level": level,
                 "rule_id": rule_id,
                 "uri": uri,
                 "line": line,
                 "message": message,
-                "allowlisted": allowlist_entry is not None,
-                "allowlist_reason": (allowlist_entry or {}).get("reason", ""),
             }
             all_records.append(record)
-            if allowlist_entry is None:
-                blocking_results.append(result)
+            blocking_results.append(result)
         blocking_run["results"] = blocking_results
 
-    allowlisted_records = [record for record in all_records if record["allowlisted"]]
-    blocking_records = [record for record in all_records if not record["allowlisted"]]
+    blocking_records = list(all_records)
 
     write_json(input_path, data)
     write_json(blocking_sarif_path, blocking_data)
-    write_summary(summary_path, all_records, blocking_records, allowlisted_records)
+    write_summary(summary_path, all_records, blocking_records)
     write_json(
         status_path,
         {
             "total_count": len(all_records),
             "blocking_count": len(blocking_records),
-            "allowlisted_count": len(allowlisted_records),
+            "blocking_error_count": len([record for record in blocking_records if record["level"] == "error"]),
             "blocking_levels": Counter(record["level"] for record in blocking_records),
-            "allowlisted_levels": Counter(record["level"] for record in allowlisted_records),
         },
     )
     return 0
