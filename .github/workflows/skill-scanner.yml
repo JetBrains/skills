@@ -42,10 +42,14 @@ jobs:
         continue-on-error: true
         run: |
           chmod +x ./.scripts/run-skill-scanner.sh
+          set +e
           ./.scripts/run-skill-scanner.sh \
             --format sarif \
             --output .reports/skill-scanner/results.sarif \
             --fail-on-severity high
+          status=$?
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit $status
 
       - name: Upload SARIF to GitHub Code Scanning
         if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) }}
@@ -53,6 +57,30 @@ jobs:
         uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: .reports/skill-scanner/results.sarif
+
+      - name: Summarize scanner results
+        if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' }}
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import collections
+          import json
+          from pathlib import Path
+
+          sarif_path = Path(".reports/skill-scanner/results.sarif")
+          data = json.loads(sarif_path.read_text())
+          runs = data.get("runs", [])
+          results = runs[0].get("results", []) if runs else []
+
+          counts = collections.Counter(result.get("level", "warning") for result in results)
+          print("## Skill Scanner Summary")
+          print()
+          print(f"- Total results: {len(results)}")
+          for level in ("error", "warning", "note", "none"):
+            if counts.get(level):
+              print(f"- {level}: {counts[level]}")
+          print()
+          print("Artifact: `skill-scanner-results`")
+          PY
 
       - name: Upload scanner artifacts
         if: ${{ always() }}
@@ -63,5 +91,8 @@ jobs:
           if-no-files-found: ignore
 
       - name: Fail workflow on scanner findings
-        if: ${{ steps.scan.outcome == 'failure' }}
-        run: exit 1
+        if: ${{ steps.scan.outputs.exit_code != '0' }}
+        run: |
+          echo "skill-scanner exited with code ${{ steps.scan.outputs.exit_code }}." >&2
+          echo "Review the GitHub job summary or the skill-scanner-results artifact for details." >&2
+          exit 1
