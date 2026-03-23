@@ -61,26 +61,10 @@ jobs:
       - name: Summarize scanner results
         if: ${{ always() && hashFiles('.reports/skill-scanner/results.sarif') != '' }}
         run: |
-          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
-          import collections
-          import json
-          from pathlib import Path
-
-          sarif_path = Path(".reports/skill-scanner/results.sarif")
-          data = json.loads(sarif_path.read_text())
-          runs = data.get("runs", [])
-          results = runs[0].get("results", []) if runs else []
-
-          counts = collections.Counter(result.get("level", "warning") for result in results)
-          print("## Skill Scanner Summary")
-          print()
-          print(f"- Total results: {len(results)}")
-          for level in ("error", "warning", "note", "none"):
-            if counts.get(level):
-              print(f"- {level}: {counts[level]}")
-          print()
-          print("Artifact: `skill-scanner-results`")
-          PY
+          python ./.scripts/summarize-skill-scanner-sarif.py \
+            .reports/skill-scanner/results.sarif \
+            > .reports/skill-scanner/summary.md
+          tee -a "$GITHUB_STEP_SUMMARY" < .reports/skill-scanner/summary.md
 
       - name: Upload scanner artifacts
         if: ${{ always() }}
@@ -94,5 +78,5 @@ jobs:
         if: ${{ steps.scan.outputs.exit_code != '0' }}
         run: |
           echo "skill-scanner exited with code ${{ steps.scan.outputs.exit_code }}." >&2
-          echo "Review the GitHub job summary or the skill-scanner-results artifact for details." >&2
+          echo "Review the 'Summarize scanner results' step, the GitHub job summary, or the skill-scanner-results artifact for details." >&2
           exit 1
