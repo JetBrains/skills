@@ -4,6 +4,9 @@ This repository contains a JetBrains-filtered and JetBrains-verified snapshot of
 
 Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact `metadata.source` link to the original upstream skill path.
 
+## Disclaimer
+These skills are provided for demonstration and educational purposes only. While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
+
 ## Summary
 
 - Total skills: 129
