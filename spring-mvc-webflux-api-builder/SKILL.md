@@ -2,6 +2,7 @@
 name: spring-mvc-webflux-api-builder
 description: Design and generate Kotlin Spring HTTP APIs with correct controller signatures, DTOs, validation, serialization assumptions, error handling, and web tests. Use when building or changing REST endpoints, choosing between MVC and WebFlux, modeling request and response payloads, standardizing error responses, or avoiding Kotlin-specific validation and Jackson mistakes.
 metadata:
+  short-description: "Generate correct Kotlin API layers"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/spring-mvc-webflux-api-builder
 ---
 

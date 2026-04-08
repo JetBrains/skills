@@ -5,6 +5,7 @@ version: 1.0.0
 license: MIT
 author: github.com/vuejs-ai
 metadata:
+  short-description: "Use Vue Router 4 effectively"
   source: https://github.com/antfu/skills/tree/main/skills/vue-router-best-practices
 ---
 

@@ -8,6 +8,7 @@ description:
   API changes.
 license: MIT
 metadata:
+  short-description: "Design scalable React composition APIs"
   author: vercel
   version: '1.0.0'
   source: https://github.com/vercel-labs/agent-skills/tree/main/skills/composition-patterns

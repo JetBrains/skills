@@ -2,6 +2,7 @@
 name: pnpm
 description: Node.js package manager with strict dependency resolution. Use when running pnpm specific commands, configuring workspaces, or managing dependencies with catalogs, patches, or overrides.
 metadata:
+  short-description: "Manage dependencies with pnpm"
   author: Anthony Fu
   version: "2026.1.28"
   source: https://github.com/antfu/skills/tree/main/skills/pnpm

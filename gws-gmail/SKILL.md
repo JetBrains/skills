@@ -3,6 +3,7 @@ name: gws-gmail
 version: 1.0.0
 description: "Gmail: Send, read, and manage email."
 metadata:
+  short-description: "Send, read, and manage Gmail"
   openclaw:
     category: "productivity"
     requires:

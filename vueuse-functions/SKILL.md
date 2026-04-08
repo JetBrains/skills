@@ -3,6 +3,7 @@ name: vueuse-functions
 description: Apply VueUse composables where appropriate to build concise, maintainable Vue.js / Nuxt features.
 license: MIT
 metadata:
+    short-description: "Use VueUse composables effectively"
     author: SerKo <https://github.com/serkodev>
     version: "1.0"
     source: https://github.com/antfu/skills/tree/main/skills/vueuse-functions

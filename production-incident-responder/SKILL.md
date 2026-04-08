@@ -2,6 +2,7 @@
 name: production-incident-responder
 description: Guide production incident response for Kotlin plus Spring services from first alert through mitigation, diagnosis, and follow-up. Use when error rates spike, latency degrades, capacity saturates, a bad deploy or config change is suspected, or the team needs reversible mitigation first and deeper root-cause work second.
 metadata:
+  short-description: "Mitigate incidents before deep diagnosis"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/production-incident-responder
 ---
 

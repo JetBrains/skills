@@ -3,6 +3,7 @@ name: gws-docs
 version: 1.0.0
 description: "Read and write Google Docs."
 metadata:
+  short-description: "Read and write Google Docs"
   openclaw:
     category: "productivity"
     requires:

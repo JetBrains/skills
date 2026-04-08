@@ -3,6 +3,7 @@ name: compose-ui-control
 description: Control a running Compose Desktop application via HTTP. Use when you need to interact with UI elements, click buttons, enter text, wait for elements to appear, or capture screenshots in a Compose Desktop app that has compose-ui-test-server enabled.
 argument-hint: "[action] [target]"
 metadata:
+  short-description: "Drive Compose Desktop apps over HTTP"
   source: https://github.com/forketyfork/compose-ui-test-server/blob/main/SKILL.md
 ---
 

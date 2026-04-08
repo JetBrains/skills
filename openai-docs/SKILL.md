@@ -2,6 +2,7 @@
 name: "openai-docs"
 description: "Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citations, help choosing the latest model for a use case, or explicit GPT-5.4 upgrade and prompt-upgrade guidance; prioritize OpenAI docs MCP tools, use bundled references only as helper context, and restrict any fallback browsing to official OpenAI domains."
 metadata:
+  short-description: "Reference official OpenAI docs, including upgrade guidance"
   source: https://github.com/openai/skills/tree/main/skills/.curated/openai-docs
 ---
 

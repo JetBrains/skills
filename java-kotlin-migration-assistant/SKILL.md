@@ -2,6 +2,7 @@
 name: java-kotlin-migration-assistant
 description: Migrate Java code to Kotlin in Spring-based codebases without changing behavior, public contracts, framework compatibility, or binary assumptions unless explicitly intended. Use when converting classes incrementally, replacing Lombok patterns, managing platform types and nullability, preserving JPA and proxy behavior, or planning the safe migration order of a mixed Java and Kotlin codebase.
 metadata:
+  short-description: "Migrate safely without semantic drift"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/java-kotlin-migration-assistant
 ---
 

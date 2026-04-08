@@ -2,6 +2,7 @@
 name: vitepress
 description: VitePress static site generator powered by Vite and Vue. Use when building documentation sites, configuring themes, or writing Markdown with Vue components.
 metadata:
+  short-description: "Build docs sites with VitePress"
   author: Anthony Fu
   version: "2026.1.28"
   source: https://github.com/antfu/skills/tree/main/skills/vitepress

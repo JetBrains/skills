@@ -3,6 +3,7 @@ name: vertex-ai-api-dev
 description: Guides the usage of Gemini API on Google Cloud Vertex AI with the Gen AI SDK. Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like Live API, tools, multimedia generation, caching, and batch prediction.
 compatibility: Requires active Google Cloud credentials and Vertex AI API enabled.
 metadata:
+  short-description: "Use Gemini on Vertex AI"
   source: https://github.com/google-gemini/gemini-skills/tree/main/skills/vertex-ai-api-dev
 ---
 

@@ -12,6 +12,7 @@ description: >-
 argument-hint: "[spec-file-path | feature description]"
 targets: [claude, codex]
 metadata:
+  short-description: "Implement features with TDD"
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/implement-feature
 ---
 

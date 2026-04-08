@@ -2,6 +2,7 @@
 name: "sora"
 description: "Use when the user asks to generate, edit, extend, poll, list, download, or delete Sora videos, create reusable non-human Sora character references, or run local multi-video queues via the bundled CLI (`scripts/sora.py`); includes requests like: (i) generate AI video, (ii) edit this Sora clip, (iii) extend this video, (iv) create a character reference, (v) download video/thumbnail/spritesheet, and (vi) Sora batch planning; requires `OPENAI_API_KEY` and Sora API access."
 metadata:
+  short-description: "Generate, edit, extend, and manage Sora videos"
   source: https://github.com/openai/skills/tree/main/skills/.curated/sora
 ---
 

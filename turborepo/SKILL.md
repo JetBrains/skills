@@ -9,6 +9,7 @@ description: |
   monorepo, shares code between apps, runs changed/affected packages, debugs cache,
   or has apps/packages directories.
 metadata:
+  short-description: "Structure and optimize Turborepo monorepos"
   version: 2.8.18-canary.7
   source: https://github.com/antfu/skills/tree/main/skills/turborepo
 ---

@@ -2,6 +2,7 @@
 name: tsdown
 description: Bundle TypeScript and JavaScript libraries with blazing-fast speed powered by Rolldown. Use when building libraries, generating type declarations, bundling for multiple formats, or migrating from tsup.
 metadata:
+  short-description: "Bundle TS/JS libraries with tsdown"
   source: https://github.com/antfu/skills/tree/main/skills/tsdown
 ---
 

@@ -9,6 +9,7 @@ description: >
   com.android.kotlin.multiplatform.library.
 license: Apache-2.0
 metadata:
+  short-description: "Migrate KMP projects to AGP 9"
   author: JetBrains
   version: "1.0.0"
   source: https://github.com/Kotlin/kotlin-agent-skills/tree/main/skills/kotlin-tooling-agp9-migration

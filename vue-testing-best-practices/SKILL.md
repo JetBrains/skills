@@ -5,6 +5,7 @@ license: MIT
 author: github.com/vuejs-ai
 description: Use for Vue.js testing. Covers Vitest, Vue Test Utils, component testing, mocking, testing patterns, and Playwright for E2E testing.
 metadata:
+  short-description: "Test Vue apps with Vitest and VTU"
   source: https://github.com/antfu/skills/tree/main/skills/vue-testing-best-practices
 ---
 

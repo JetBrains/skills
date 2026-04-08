@@ -3,6 +3,7 @@ name: algorithmic-art
 description: Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.
 license: Complete terms in LICENSE.txt
 metadata:
+  short-description: "Create generative art with p5.js"
   source: https://github.com/anthropics/skills/tree/main/skills/algorithmic-art
 ---
 
@@ -36,7 +37,7 @@ The philosophy must emphasize: Algorithmic expression. Emergent behavior. Comput
 ### HOW TO GENERATE AN ALGORITHMIC PHILOSOPHY
 
 **Name the movement** (1-2 words): "Organic Turbulence" / "Quantum Harmonics" / "Emergent Stillness"
-
+6877532
 **Articulate the philosophy** (4-6 paragraphs - concise but complete):
 
 To capture the ALGORITHMIC essence, express how this philosophy manifests through:

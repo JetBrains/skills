@@ -2,6 +2,7 @@
 name: spring-security-configurator-auditor
 description: Design and audit Spring Security configurations for Kotlin plus Spring services, including filter chains, JWT or OAuth2 resource server setup, method security, CORS, CSRF rationale, and public endpoint exposure. Use when adding or reviewing authentication and authorization, narrowing access rules, validating token handling, or checking for insecure defaults and accidental exposure.
 metadata:
+  short-description: "Build and audit secure filter chains"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/spring-security-configurator-auditor
 ---
 

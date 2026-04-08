@@ -3,6 +3,7 @@ name: gws-sheets
 version: 1.0.0
 description: "Google Sheets: Read and write spreadsheets."
 metadata:
+  short-description: "Read and write Google Sheets"
   openclaw:
     category: "productivity"
     requires:

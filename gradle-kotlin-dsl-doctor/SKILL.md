@@ -2,6 +2,7 @@
 name: gradle-kotlin-dsl-doctor
 description: Generate, debug, and repair Kotlin + Spring Gradle builds with minimal, compatible changes. Use when `build.gradle.kts` or `settings.gradle.kts` is failing, plugins or toolchains are incompatible, dependency management is drifting from the Spring Boot BOM, test or runtime classpaths are broken, or a Kotlin DSL patch must be safe and incremental.
 metadata:
+  short-description: "Repair Kotlin/Spring builds safely"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/gradle-kotlin-dsl-doctor
 ---
 

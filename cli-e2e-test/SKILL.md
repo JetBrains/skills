@@ -12,6 +12,7 @@ description: >-
 argument-hint: "[runbook-name | new]"
 targets: [claude, codex]
 metadata:
+  short-description: "Run isolated CLI E2E runbooks"
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/cli-e2e-test
 ---
 

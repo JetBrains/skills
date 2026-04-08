@@ -2,6 +2,7 @@
 name: cloudflare-deploy
 description: Deploy applications and infrastructure to Cloudflare using Workers, Pages, and related platform services. Use when the user asks to deploy, host, publish, or set up a project on Cloudflare.
 metadata:
+  short-description: "Deploy Workers, Pages, and platform services on Cloudflare"
   source: https://github.com/openai/skills/tree/main/skills/.curated/cloudflare-deploy
 ---
 

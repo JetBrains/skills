@@ -12,6 +12,7 @@ description: >-
   use this skill to ensure consistency.
 targets: [claude, codex, cursor]
 metadata:
+  short-description: "Apply the skillshare frontend design system"
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/ui-website-style
 ---
 

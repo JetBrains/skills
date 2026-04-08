@@ -12,6 +12,7 @@ allowed-tools:
   - Read
   - AskUserQuestion
 metadata:
+  short-description: "Manage YouTrack issues via API"
   source: https://github.com/forketyfork/agentic-skills/tree/main/skills/managing-youtrack/skills/managing-youtrack
 ---
 

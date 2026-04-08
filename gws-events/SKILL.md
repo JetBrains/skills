@@ -3,6 +3,7 @@ name: gws-events
 version: 1.0.0
 description: "Subscribe to Google Workspace events."
 metadata:
+  short-description: "Subscribe to Google Workspace events"
   openclaw:
     category: "productivity"
     requires:

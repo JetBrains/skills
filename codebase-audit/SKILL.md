@@ -10,6 +10,7 @@ description: >-
   have drifted out of sync.
 targets: [claude, codex]
 metadata:
+  short-description: "Audit docs, flags, tests, and targets"
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/codebase-audit
 ---
 

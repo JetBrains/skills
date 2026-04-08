@@ -12,6 +12,7 @@ description: >-
 argument-hint: "[command-name | commit-range]"
 targets: [claude, codex]
 metadata:
+  short-description: "Sync docs with code changes"
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/update-docs
 ---
 

@@ -3,6 +3,7 @@ name: gws-slides
 version: 1.0.0
 description: "Google Slides: Read and write presentations."
 metadata:
+  short-description: "Read and write Google Slides"
   openclaw:
     category: "productivity"
     requires:

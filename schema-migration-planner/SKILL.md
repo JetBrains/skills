@@ -2,6 +2,7 @@
 name: schema-migration-planner
 description: Plan safe database schema evolution and zero-downtime change rollout for Kotlin plus Spring systems using Flyway, Liquibase, or equivalent migration tooling. Use when changing tables, columns, constraints, indexes, or data shape in systems with live traffic, rolling deploys, large datasets, or backward-compatibility requirements between old and new application versions.
 metadata:
+  short-description: "Evolve schemas without breaking deploys"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/schema-migration-planner
 ---
 

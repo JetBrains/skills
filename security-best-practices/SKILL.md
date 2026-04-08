@@ -2,6 +2,7 @@
 name: "security-best-practices"
 description: "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks."
 metadata:
+  short-description: "Security reviews and secure-by-default guidance"
   source: https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices
 ---
 

@@ -2,6 +2,7 @@
 name: vite
 description: Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite.
 metadata:
+  short-description: "Build and configure apps with Vite"
   author: Anthony Fu
   version: "2026.1.31"
   source: https://github.com/antfu/skills/tree/main/skills/vite

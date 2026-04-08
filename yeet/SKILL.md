@@ -2,6 +2,7 @@
 name: "yeet"
 description: "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`)."
 metadata:
+  short-description: "Stage, commit, and open PR"
   source: https://github.com/openai/skills/tree/main/skills/.curated/yeet
 ---
 

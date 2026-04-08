@@ -4,6 +4,7 @@ version: "0.7.0"
 author: JetBrains
 description: Use when working with TeamCity CI/CD or when user provides a TeamCity build URL. Use `teamcity` CLI for builds, logs, jobs, queues, and agents.
 metadata:
+  short-description: "Operate TeamCity from the CLI"
   source: https://github.com/JetBrains/teamcity-cli/tree/main/skills/teamcity-cli
 ---
 

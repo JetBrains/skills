@@ -3,6 +3,7 @@ name: supabase-postgres-best-practices
 description: Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.
 license: MIT
 metadata:
+  short-description: "Optimize Postgres schema and queries"
   author: supabase
   version: "1.1.0"
   organization: Supabase

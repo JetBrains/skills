@@ -2,6 +2,7 @@
 name: performance-concurrency-advisor
 description: Analyze and improve performance, throughput, latency, and concurrency behavior in Kotlin plus Spring services using real evidence from metrics, traces, SQL, thread or heap signals, and code paths. Use when endpoints are slow, pools saturate, coroutines or reactive flows block unexpectedly, N+1 or contention appears, or caching and parallelism decisions need precise, non-generic guidance.
 metadata:
+  short-description: "Diagnose bottlenecks with real signals"
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/performance-concurrency-advisor
 ---
 
