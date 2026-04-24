@@ -1,6 +1,7 @@
 ---
 name: "pdf"
 description: "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction."
+license: Apache-2.0
 metadata:
   short-description: "Create, edit, and review PDFs"
   source: https://github.com/openai/skills/tree/main/skills/.curated/pdf
