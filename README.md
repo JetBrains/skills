@@ -6,7 +6,7 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 130
+- Total skills: 126
 - Upstream repositories: 14
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
@@ -38,7 +38,6 @@ CI:
 | Anthropic | [`algorithmic-art`](./algorithmic-art) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthony Fu | [`antfu`](./antfu) | [antfu/skills](https://github.com/antfu/skills) |
 | Vercel | [`antfu-web-design-guidelines`](./antfu-web-design-guidelines) | [antfu/skills](https://github.com/antfu/skills) |
-| Anthropic | [`anthropics-pdf`](./anthropics-pdf) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthropic | [`brand-guidelines`](./brand-guidelines) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthropic | [`canvas-design`](./canvas-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | runkids | [`changelog`](./changelog) | [runkids/skillshare](https://github.com/runkids/skillshare) |
@@ -53,7 +52,6 @@ CI:
 | runkids | [`devcontainer`](./devcontainer) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`doc`](./doc) | [openai/skills](https://github.com/openai/skills) |
 | Anthropic | [`doc-coauthoring`](./doc-coauthoring) | [anthropics/skills](https://github.com/anthropics/skills) |
-| Anthropic | [`docx`](./docx) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Kotlin | [`domain-decomposition-api-design-advisor`](./domain-decomposition-api-design-advisor) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | Kotlin | [`error-model-validation-architect`](./error-model-validation-architect) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | OpenAI | [`figma`](./figma) | [openai/skills](https://github.com/openai/skills) |
@@ -114,7 +112,6 @@ CI:
 | OpenAI | [`playwright`](./playwright) | [openai/skills](https://github.com/openai/skills) |
 | Anthony Fu | [`pnpm`](./pnpm) | [antfu/skills](https://github.com/antfu/skills) |
 | Supabase | [`postgres-best-practices`](./postgres-best-practices) | [supabase/agent-skills](https://github.com/supabase/agent-skills) |
-| Anthropic | [`pptx`](./pptx) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Kotlin | [`production-incident-responder`](./production-incident-responder) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | Kotlin | [`project-context-ingestion`](./project-context-ingestion) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | Vercel | [`react-best-practices`](./react-best-practices) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
@@ -163,7 +160,6 @@ CI:
 | Anthony Fu | [`vueuse-functions`](./vueuse-functions) | [antfu/skills](https://github.com/antfu/skills) |
 | Anthropic | [`webapp-testing`](./webapp-testing) | [anthropics/skills](https://github.com/anthropics/skills) |
 | dgreenheck | [`webgpu-threejs-tsl`](./webgpu-threejs-tsl) | [dgreenheck/webgpu-claude-skill](https://github.com/dgreenheck/webgpu-claude-skill) |
-| Anthropic | [`xlsx`](./xlsx) | [anthropics/skills](https://github.com/anthropics/skills) |
 | OpenAI | [`yeet`](./yeet) | [openai/skills](https://github.com/openai/skills) |
 
 ## Disclaimer
