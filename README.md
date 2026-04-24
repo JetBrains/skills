@@ -6,7 +6,7 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 126
+- Total skills: 127
 - Upstream repositories: 14
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
@@ -126,6 +126,7 @@ CI:
 | OpenAI | [`skill-installer`](./skill-installer) | [openai/skills](https://github.com/openai/skills) |
 | runkids | [`skillshare`](./skillshare) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | Anthropic | [`slack-gif-creator`](./slack-gif-creator) | [anthropics/skills](https://github.com/anthropics/skills) |
+| OpenAI | [`slides`](./slides) | [openai/skills](https://github.com/openai/skills) |
 | Anthony Fu | [`slidev`](./slidev) | [antfu/skills](https://github.com/antfu/skills) |
 | OpenAI | [`sora`](./sora) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`speech`](./speech) | [openai/skills](https://github.com/openai/skills) |
