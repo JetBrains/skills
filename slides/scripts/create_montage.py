@@ -2,20 +2,14 @@
 # Copyright (c) OpenAI. All rights reserved.
 import argparse
 import re
-import sys
-import tempfile
 from math import ceil
 from os import listdir
 from os.path import basename, expanduser, isfile, join, splitext
-from pathlib import Path
 from typing import Literal
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
-
-from ensure_raster_image import SUPPORTED_EXTS, ensure_raster_image  # type: ignore
 from PIL import Image, ImageDraw, ImageFont, ImageOps
+
+SUPPORTED_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tif", ".tiff", ".webp"}
 
 
 def _make_placeholder(w: int, h: int) -> Image.Image:
@@ -29,29 +23,18 @@ def _make_placeholder(w: int, h: int) -> Image.Image:
 
 
 def _load_images_with_placeholders(
-    input_files: list[str], retain_converted_files: bool, fail_on_image_error: bool = False
+    input_files: list[str], fail_on_image_error: bool = False
 ) -> tuple[list[str], list[Image.Image | None]]:
     labels = [basename(p) for p in input_files]
     images: list[Image.Image | None] = []
-    if retain_converted_files:
-        for p in input_files:
-            try:
-                images.append(Image.open(ensure_raster_image(p)))
-            except Exception as e:
-                if fail_on_image_error:
-                    raise
-                print(f'Warning: Failed to convert or load image "{p}": {e}')
-                images.append(None)
-    else:
-        with tempfile.TemporaryDirectory(prefix="montage_convert_") as tmp_conv:
-            for p in input_files:
-                try:
-                    images.append(Image.open(ensure_raster_image(p, tmp_conv)))
-                except Exception as e:
-                    if fail_on_image_error:
-                        raise
-                    print(f'Warning: Failed to convert or load image "{p}": {e}')
-                    images.append(None)
+    for p in input_files:
+        try:
+            images.append(Image.open(p))
+        except Exception as e:
+            if fail_on_image_error:
+                raise
+            print(f'Warning: Failed to load image "{p}": {e}')
+            images.append(None)
     return labels, images
 
 
@@ -68,7 +51,6 @@ def create_montage(
     cell_h: int,
     gap: int,
     label_mode: Literal["number", "filename", "none"],
-    retain_converted_files: bool = False,
     fail_on_image_error: bool = False,
 ) -> None:
     """Build a montage with a fixed number of columns.
@@ -88,7 +70,6 @@ def create_montage(
 
     labels, images = _load_images_with_placeholders(
         input_files=input_files,
-        retain_converted_files=retain_converted_files,
         fail_on_image_error=fail_on_image_error,
     )
 
@@ -249,15 +230,6 @@ def main() -> None:
         ),
     )
     parser.add_argument(
-        "--retain_converted_files",
-        action="store_true",
-        default=False,
-        help=(
-            "If set, write converted images (e.g., SVG->PNG, WDP->PNG) next to the original files "
-            "instead of a temporary directory."
-        ),
-    )
-    parser.add_argument(
         "--fail_on_image_error",
         action="store_true",
         default=False,
@@ -291,7 +263,6 @@ def main() -> None:
         cell_h=args.cell_height,
         gap=args.gap,
         label_mode=args.label_mode,
-        retain_converted_files=args.retain_converted_files,
         fail_on_image_error=args.fail_on_image_error,
     )
 

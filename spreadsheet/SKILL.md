@@ -1,6 +1,7 @@
 ---
 name: "spreadsheet"
 description: "Use when tasks involve creating, editing, analyzing, or formatting spreadsheets (`.xlsx`, `.csv`, `.tsv`) with formula-aware workflows, cached recalculation, and visual review."
+license: Apache-2.0
 metadata:
   short-description: "Create, edit, and analyze spreadsheets"
   source: https://github.com/openai/skills/tree/e6afb0d74cc75d220df2faf3dd6c635c2dc6a108/skills/.curated/spreadsheet
