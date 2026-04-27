@@ -63,8 +63,8 @@ Provides `grecaptcha` API for Google reCAPTCHA drop-in replacement.
   'refresh-expired': 'auto',        // 'auto' | 'manual' | 'never'
 
   // Form Integration
-  'response-field': true,           // Add hidden input (default: true)
-  'response-field-name': 'cf-turnstile-response', // Hidden input name
+  'response-field': true,           // Add auto-generated form field (default: true)
+  'response-field-name': 'cf-turnstile-response', // Auto-generated form field name
 
   // Analytics & Data
   action: 'login',                  // Action name (for analytics)
