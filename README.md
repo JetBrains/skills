@@ -6,7 +6,7 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 127
+- Total skills: 126
 - Upstream repositories: 14
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
@@ -55,7 +55,6 @@ CI:
 | Kotlin | [`domain-decomposition-api-design-advisor`](./domain-decomposition-api-design-advisor) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | Kotlin | [`error-model-validation-architect`](./error-model-validation-architect) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | OpenAI | [`figma`](./figma) | [openai/skills](https://github.com/openai/skills) |
-| OpenAI | [`figma-implement-design`](./figma-implement-design) | [openai/skills](https://github.com/openai/skills) |
 | Anthropic | [`frontend-design`](./frontend-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Google Gemini | [`gemini-api-dev`](./gemini-api-dev) | [google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills) |
 | Google Gemini | [`gemini-interactions-api`](./gemini-interactions-api) | [google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills) |
