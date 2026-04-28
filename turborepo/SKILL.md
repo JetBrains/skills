@@ -10,6 +10,7 @@ description: |
   or has apps/packages directories.
 metadata:
   short-description: "Structure and optimize Turborepo monorepos"
+  author: Anthony Fu
   version: 2.8.18-canary.7
   source: https://github.com/antfu/skills/tree/main/skills/turborepo
 ---

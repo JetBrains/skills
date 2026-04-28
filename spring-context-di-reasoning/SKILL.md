@@ -3,6 +3,7 @@ name: spring-context-di-reasoning
 description: Diagnose Spring application context startup failures, bean graph problems, missing or duplicate beans, circular dependencies, conditional auto-configuration mismatches, and profile-related wiring issues in Kotlin + Spring projects. Use when the app does not start, a bean is not created or is created unexpectedly, auto-configuration behaves strangely, or a minimal DI fix is needed instead of a broad rewrite.
 metadata:
   short-description: "Resolve bean graph and context failures"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/spring-context-di-reasoning
 ---
 

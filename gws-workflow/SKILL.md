@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Workflow: Cross-service productivity workflows."
 metadata:
   short-description: "Orchestrate Google Workspace workflows"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

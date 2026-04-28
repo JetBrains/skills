@@ -4,7 +4,7 @@ description: Postgres performance optimization and best practices from Supabase.
 license: MIT
 metadata:
   short-description: "Optimize Postgres schema and queries"
-  author: supabase
+  author: Supabase
   version: "1.1.0"
   organization: Supabase
   date: January 2026

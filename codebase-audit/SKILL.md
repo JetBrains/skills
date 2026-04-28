@@ -11,6 +11,7 @@ description: >-
 targets: [claude, codex]
 metadata:
   short-description: "Audit docs, flags, tests, and targets"
+  author: Runkids
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/codebase-audit
 ---
 

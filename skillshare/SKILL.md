@@ -14,6 +14,7 @@ description: |
 argument-hint: "[command] [target] [--json] [--dry-run] [-p|-g]"
 metadata:
   short-description: "Manage AI CLI skills across tools"
+  author: Runkids
   source: https://github.com/runkids/skillshare/tree/main/skills/skillshare
 ---
 

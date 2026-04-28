@@ -3,6 +3,7 @@ name: render-deploy
 description: Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplinks. Use when the user wants to deploy, host, publish, or set up their application on Render's cloud platform.
 metadata:
   short-description: "Deploy applications to Render via Blueprints or MCP"
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/render-deploy
 ---
 

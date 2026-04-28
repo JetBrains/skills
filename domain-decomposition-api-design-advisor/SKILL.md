@@ -3,6 +3,7 @@ name: domain-decomposition-api-design-advisor
 description: Decompose business scope into bounded contexts, module or service boundaries, workflows, and API contracts before implementation begins. Use when shaping a new feature, service, or major redesign; when requirements are underspecified; when consistency, idempotency, and integration boundaries must be made explicit; or when ADR-quality tradeoff reasoning is needed for Kotlin plus Spring systems.
 metadata:
   short-description: "Decompose scope before code exists"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/domain-decomposition-api-design-advisor
 ---
 

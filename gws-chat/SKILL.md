@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Chat: Manage Chat spaces and messages."
 metadata:
   short-description: "Manage Google Chat spaces"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

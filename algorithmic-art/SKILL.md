@@ -4,6 +4,7 @@ description: Creating algorithmic art using p5.js with seeded randomness and int
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Create generative art with p5.js"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/algorithmic-art
 ---
 

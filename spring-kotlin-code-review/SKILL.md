@@ -3,6 +3,7 @@ name: spring-kotlin-code-review
 description: Review Kotlin + Spring changes for behavioral regressions, transaction and proxy bugs, API and serialization mistakes, persistence risks, security issues, configuration drift, and missing tests. Use when reviewing a PR, diff, patch, or design change where generic style-focused review would miss Spring-specific correctness and operational risks.
 metadata:
   short-description: "Review PRs for Spring-specific risks"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/spring-kotlin-code-review
 ---
 

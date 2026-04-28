@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Model Armor: Filter user-generated content for safety."
 metadata:
   short-description: "Filter content with Google Model Armor"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

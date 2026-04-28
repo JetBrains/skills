@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Manage Google Keep notes."
 metadata:
   short-description: "Manage Google Keep notes"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

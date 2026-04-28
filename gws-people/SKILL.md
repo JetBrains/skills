@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google People: Manage contacts and profiles."
 metadata:
   short-description: "Manage Google contacts and profiles"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

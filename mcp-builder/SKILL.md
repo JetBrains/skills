@@ -4,6 +4,7 @@ description: Guide for creating high-quality MCP (Model Context Protocol) server
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Build high-quality MCP servers"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
 ---
 

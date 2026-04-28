@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Subscribe to Google Workspace events."
 metadata:
   short-description: "Subscribe to Google Workspace events"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

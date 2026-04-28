@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Classroom: Manage classes, rosters, and coursework."
 metadata:
   short-description: "Manage Google Classroom coursework"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

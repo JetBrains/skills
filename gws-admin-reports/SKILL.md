@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Workspace Admin SDK: Audit logs and usage reports."
 metadata:
   short-description: "Access Google Workspace audit reports"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

@@ -3,6 +3,7 @@ name: integration-resilience-engineer
 description: Design resilient HTTP, messaging, and scheduled integrations for Kotlin plus Spring services with explicit timeout budgets, retries, idempotency, circuit breakers, DLQ behavior, and failure observability. Use when integrating with unstable external systems, designing retry logic, handling duplicate delivery, preventing thundering herds, or making message-driven and scheduled workflows safe in production.
 metadata:
   short-description: "Harden clients, retries, and messaging"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/integration-resilience-engineer
 ---
 

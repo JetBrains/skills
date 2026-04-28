@@ -4,6 +4,7 @@ description: Control a running Compose Desktop application via HTTP. Use when yo
 argument-hint: "[action] [target]"
 metadata:
   short-description: "Drive Compose Desktop apps over HTTP"
+  author: Forketyfork
   source: https://github.com/forketyfork/compose-ui-test-server/blob/main/SKILL.md
 ---
 

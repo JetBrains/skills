@@ -3,6 +3,7 @@ name: configuration-properties-profiles-kotlin-safe
 description: Design and diagnose Spring configuration, profiles, and `@ConfigurationProperties` binding for Kotlin applications. Use when property binding fails, environment-specific overrides behave unexpectedly, profile layering is confusing, secrets or defaults are modeled unsafely, or Kotlin nullability and constructor binding semantics make configuration errors hard to detect.
 metadata:
   short-description: "Make Kotlin Spring config predictable"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/configuration-properties-profiles-kotlin-safe
 ---
 
