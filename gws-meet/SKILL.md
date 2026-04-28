@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Manage Google Meet conferences."
 metadata:
   short-description: "Manage Google Meet conferences"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

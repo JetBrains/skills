@@ -3,6 +3,7 @@ name: transaction-consistency-designer
 description: Design safe transaction boundaries, rollback behavior, idempotency, locking, and consistency strategies for Kotlin + Spring business workflows. Use when a feature writes to the database, spans multiple repositories, publishes messages, calls external systems, suffers from partial commits or duplicate processing, or needs precise `@Transactional`, propagation, or isolation guidance.
 metadata:
   short-description: "Place safe transaction boundaries"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/transaction-consistency-designer
 ---
 

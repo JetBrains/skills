@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Read and write Google Docs."
 metadata:
   short-description: "Read and write Google Docs"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

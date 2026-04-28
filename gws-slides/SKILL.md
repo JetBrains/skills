@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Slides: Read and write presentations."
 metadata:
   short-description: "Read and write Google Slides"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

@@ -8,7 +8,7 @@ description:
 license: MIT
 metadata:
   short-description: "Build performant React Native and Expo apps"
-  author: vercel
+  author: Vercel
   version: '1.0.0'
   source: https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills
 ---

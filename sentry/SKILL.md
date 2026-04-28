@@ -3,6 +3,7 @@ name: "sentry"
 description: "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`."
 metadata:
   short-description: "Read-only Sentry observability"
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/sentry
 ---
 

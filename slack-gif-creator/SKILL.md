@@ -4,6 +4,7 @@ description: Knowledge and utilities for creating animated GIFs optimized for Sl
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Create Slack-optimized animated GIFs"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator
 ---
 

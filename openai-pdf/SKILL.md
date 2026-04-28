@@ -4,6 +4,7 @@ description: "Use when tasks involve reading, creating, or reviewing PDF files w
 license: Apache-2.0
 metadata:
   short-description: "Create, edit, and review PDFs"
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/pdf
 ---
 

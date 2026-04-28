@@ -3,6 +3,7 @@ name: stacktrace-log-triage
 description: Diagnose Kotlin + Spring failures from stack traces, startup logs, runtime logs, and related metric anomalies, then separate root cause from wrapper exceptions and propose safe next steps. Use when the application fails to start, an endpoint crashes, logs are noisy or deeply nested, or the agent must produce both a quick mitigation and a proper long-term fix without guessing.
 metadata:
   short-description: "Diagnose Spring/Kotlin failures fast"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/stacktrace-log-triage
 ---
 

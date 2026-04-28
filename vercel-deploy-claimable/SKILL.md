@@ -3,7 +3,7 @@ name: deploy-to-vercel
 description: Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
 metadata:
   short-description: "Deploy apps and sites to Vercel"
-  author: vercel
+  author: Vercel
   version: "3.0.0"
   source: https://github.com/vercel-labs/agent-skills/tree/main/skills/deploy-to-vercel
 ---

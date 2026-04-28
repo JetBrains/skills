@@ -13,6 +13,7 @@ argument-hint: "[command-to-run | task-description]"
 targets: [claude, codex]
 metadata:
   short-description: "Run skillshare inside the devcontainer"
+  author: Runkids
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/devcontainer
 ---
 

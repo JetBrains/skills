@@ -3,6 +3,7 @@ name: kotlin-spring-proxy-compatibility
 description: Diagnose and prevent Kotlin plus Spring proxy failures around `@Transactional`, `@Cacheable`, `@Async`, method security, retry, configuration proxies, and JPA entity requirements. Use when AOP annotations appear to do nothing, transactional or cache behavior is inconsistent, compiler plugins may be missing, self-invocation is suspected, or Kotlin final-by-default semantics may break Spring behavior.
 metadata:
   short-description: "Prevent final/proxy/AOP runtime traps"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/kotlin-spring-proxy-compatibility
 ---
 

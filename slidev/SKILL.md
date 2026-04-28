@@ -3,6 +3,7 @@ name: slidev
 description: Create and present web-based slidedecks for developers using Slidev with Markdown, Vue components, code highlighting, animations, and interactive features. Use when building technical presentations, conference talks, code walkthroughs, teaching materials, or developer decks.
 metadata:
   short-description: "Build developer slide decks with Slidev"
+  author: Anthony Fu
   source: https://github.com/antfu/skills/tree/main/skills/slidev
 ---
 

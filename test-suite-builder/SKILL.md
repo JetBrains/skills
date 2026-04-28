@@ -3,6 +3,7 @@ name: test-suite-builder
 description: Design and generate layered Kotlin + Spring tests that balance speed, realism, and regression value across unit, slice, and integration levels. Use when adding coverage for business logic, controllers, repositories, security, serialization, or end-to-end workflows, and when generic AI output would otherwise overuse `@SpringBootTest`, misuse mocks, or ignore MockK and coroutine testing idioms.
 metadata:
   short-description: "Design layered Kotlin/Spring tests"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/test-suite-builder
 ---
 

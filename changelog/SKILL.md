@@ -13,6 +13,7 @@ argument-hint: "[tag-version]"
 targets: [claude, codex]
 metadata:
   short-description: "Generate changelogs and release notes"
+  author: Runkids
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/changelog
 ---
 

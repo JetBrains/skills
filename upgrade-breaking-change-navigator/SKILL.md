@@ -3,6 +3,7 @@ name: upgrade-breaking-change-navigator
 description: Plan and execute risky Spring Boot, Spring Framework, Kotlin, Gradle, JDK, and major dependency upgrades with explicit compatibility checkpoints and rollback thinking. Use when preparing or diagnosing a major version jump, navigating `javax` to `jakarta`, K2 adoption, plugin compatibility, auto-configuration drift, behavior changes in Hibernate or Security, or project-specific upgrade sequencing.
 metadata:
   short-description: "Plan risky platform upgrades safely"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/upgrade-breaking-change-navigator
 ---
 

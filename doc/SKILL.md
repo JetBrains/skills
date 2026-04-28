@@ -4,6 +4,7 @@ description: "Use when the task involves reading, creating, or editing `.docx` d
 license: Apache-2.0
 metadata:
   short-description: "Edit and review docx files"
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/doc
 ---
 

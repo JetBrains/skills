@@ -4,6 +4,7 @@ description: Create distinctive, production-grade frontend interfaces with high 
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Design polished production web interfaces"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/frontend-design
 ---
 

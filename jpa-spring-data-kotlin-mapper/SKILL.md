@@ -3,6 +3,7 @@ name: jpa-spring-data-kotlin-mapper
 description: Model Kotlin persistence code correctly for Spring Data JPA and Hibernate, including entity design, relationships, fetch plans, repository queries, lazy loading, and common performance traps. Use when creating or reviewing entities and repositories, diagnosing N+1 or `LazyInitializationException`, placing indexes and uniqueness rules, or preventing Kotlin-specific ORM bugs such as `data class` entities and broken `equals` or `hashCode`.
 metadata:
   short-description: "Model Kotlin persistence correctly"
+  author: Kotlin
   source: https://github.com/Kotlin/kotlin-backend-agent-skills/tree/main/.agents/skills/jpa-spring-data-kotlin-mapper
 ---
 

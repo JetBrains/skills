@@ -4,6 +4,7 @@ description: Applies Anthropic's official brand colors and typography to any sor
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Apply Anthropic brand styling"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/brand-guidelines
 ---
 

@@ -4,6 +4,7 @@ description: Guides the usage of Gemini API on Google Cloud Vertex AI with the G
 compatibility: Requires active Google Cloud credentials and Vertex AI API enabled.
 metadata:
   short-description: "Use Gemini on Vertex AI"
+  author: Google Gemini
   source: https://github.com/google-gemini/gemini-skills/tree/main/skills/vertex-ai-api-dev
 ---
 

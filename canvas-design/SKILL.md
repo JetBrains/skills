@@ -4,6 +4,7 @@ description: Create beautiful visual art in .png and .pdf documents using design
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Create static visual artwork"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/canvas-design
 ---
 

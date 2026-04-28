@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Sheets: Read and write spreadsheets."
 metadata:
   short-description: "Read and write Google Sheets"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

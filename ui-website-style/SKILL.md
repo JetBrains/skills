@@ -13,6 +13,7 @@ description: >-
 targets: [claude, codex, cursor]
 metadata:
   short-description: "Apply the skillshare frontend design system"
+  author: Runkids
   source: https://github.com/runkids/skillshare/tree/main/.skillshare/skills/ui-website-style
 ---
 

@@ -4,6 +4,7 @@ description: Create and edit presentation slide decks (`.pptx`) with PptxGenJS a
 license: Apache-2.0
 metadata:
   short-description: "Create and edit PPTX slide decks"
+  author: OpenAI
   source: https://github.com/openai/skills/tree/e6afb0d74cc75d220df2faf3dd6c635c2dc6a108/skills/.curated/slides
 ---
 

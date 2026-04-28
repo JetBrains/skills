@@ -4,6 +4,7 @@ description: Toolkit for styling artifacts with a theme. These artifacts can be 
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Apply reusable visual themes"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/theme-factory
 ---
 

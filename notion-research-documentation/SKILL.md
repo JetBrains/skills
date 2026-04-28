@@ -3,6 +3,7 @@ name: notion-research-documentation
 description: Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.
 metadata:
   short-description: Research Notion content and produce briefs/reports
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/notion-research-documentation
 ---
 

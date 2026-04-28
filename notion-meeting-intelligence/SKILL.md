@@ -3,6 +3,7 @@ name: notion-meeting-intelligence
 description: Prepare meeting materials with Notion context and Codex research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.
 metadata:
   short-description: Prep meetings with Notion context and tailored agendas
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/notion-meeting-intelligence
 ---
 

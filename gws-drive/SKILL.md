@@ -4,6 +4,7 @@ version: 1.0.0
 description: "Google Drive: Manage files, folders, and shared drives."
 metadata:
   short-description: "Manage Google Drive files"
+  author: Google Workspace
   openclaw:
     category: "productivity"
     requires:

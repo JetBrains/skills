@@ -4,6 +4,7 @@ description: Toolkit for interacting with and testing local web applications usi
 license: Complete terms in LICENSE.txt
 metadata:
   short-description: "Test local web apps with Playwright"
+  author: Anthropic
   source: https://github.com/anthropics/skills/tree/main/skills/webapp-testing
 ---
 

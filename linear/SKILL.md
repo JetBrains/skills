@@ -3,6 +3,7 @@ name: linear
 description: Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.
 metadata:
   short-description: Manage Linear issues in Codex
+  author: OpenAI
   source: https://github.com/openai/skills/tree/main/skills/.curated/linear
 ---
 
