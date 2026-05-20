@@ -15,6 +15,11 @@ description: |
   - Backend: Database SQL, ORMs, Express API routes.
   - Pipelines: CI/CD deployment, Docker, Actions.
   - Generic: Local scripts (Python/Go tools), ESLint, Git.
+license: Apache-2.0
+metadata:
+  author: Google Chrome
+  version: "0.0.166"
+  source: https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/modern-web-guidance
 ---
 
 # Modern Web Guidance

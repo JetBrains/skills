@@ -74,7 +74,7 @@ accent-color has limited availability.
 Supported by: Chrome 93 (Aug 2021), Edge 93 (Sep 2021), and Firefox 92 (Sep 2021).
 Unsupported in: Safari.
 
-For browsers that do not support `accent-color`, the form controls fall back to the browser's default appearance. To ensure full brand consistency and high reliability across all environments, you MUST implement a custom fallback strategy using the established "visually hidden input" technique.
+For browsers that do not support `accent-color`, the form controls fall back to the browser's default appearance. To ensure full brand consistency and high reliability across all environments, use a custom fallback strategy such as the established visually concealed native-control technique.
 
 ### Progressive Enhancement with `@supports not`
 

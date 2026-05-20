@@ -1,5 +1,5 @@
 ---
-name: chrome-extensions
+name: modern-web-guidance-chrome-extensions
 description: >
   Build and publish Chrome Extensions using Manifest V3 best practices. Use this skill
   whenever the user asks to create, modify, debug, or understand Chrome browser extensions,
@@ -11,6 +11,11 @@ description: >
   publishing to the Chrome Web Store: 'publish extension', preparing an extension for
   publishing, responding to a review rejection, writing permission justifications, or
   drafting a privacy policy.
+license: Apache-2.0
+metadata:
+  author: Google Chrome
+  version: "0.0.166"
+  source: https://github.com/GoogleChrome/modern-web-guidance/tree/main/skills/chrome-extensions
 ---
 
 # Chrome Extensions

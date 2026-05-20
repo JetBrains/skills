@@ -41,7 +41,7 @@ CI:
 | Anthropic | [`brand-guidelines`](./brand-guidelines) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthropic | [`canvas-design`](./canvas-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | runkids | [`changelog`](./changelog) | [runkids/skillshare](https://github.com/runkids/skillshare) |
-| Google Chrome | [`chrome-extensions`](./chrome-extensions) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
+| Google Chrome | [`modern-web-guidance-chrome-extensions`](./modern-web-guidance-chrome-extensions) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
 | Kotlin | [`ci-cd-containerization-advisor`](./ci-cd-containerization-advisor) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | runkids | [`cli-e2e-test`](./cli-e2e-test) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`cloudflare-deploy`](./cloudflare-deploy) | [openai/skills](https://github.com/openai/skills) |
