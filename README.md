@@ -6,8 +6,8 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 126
-- Upstream repositories: 14
+- Total skills: 128
+- Upstream repositories: 15
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
 ## Security Scanning
@@ -41,6 +41,7 @@ CI:
 | Anthropic | [`brand-guidelines`](./brand-guidelines) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthropic | [`canvas-design`](./canvas-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | runkids | [`changelog`](./changelog) | [runkids/skillshare](https://github.com/runkids/skillshare) |
+| Google Chrome | [`chrome-extensions`](./chrome-extensions) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
 | Kotlin | [`ci-cd-containerization-advisor`](./ci-cd-containerization-advisor) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | runkids | [`cli-e2e-test`](./cli-e2e-test) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`cloudflare-deploy`](./cloudflare-deploy) | [openai/skills](https://github.com/openai/skills) |
@@ -97,6 +98,7 @@ CI:
 | OpenAI | [`linear`](./linear) | [openai/skills](https://github.com/openai/skills) |
 | forketyfork | [`managing-youtrack`](./managing-youtrack) | [forketyfork/agentic-skills](https://github.com/forketyfork/agentic-skills) |
 | Anthropic | [`mcp-builder`](./mcp-builder) | [anthropics/skills](https://github.com/anthropics/skills) |
+| Google Chrome | [`modern-web-guidance`](./modern-web-guidance) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
 | OpenAI | [`netlify-deploy`](./netlify-deploy) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-knowledge-capture`](./notion-knowledge-capture) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-meeting-intelligence`](./notion-meeting-intelligence) | [openai/skills](https://github.com/openai/skills) |
