@@ -6,7 +6,7 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 127
+- Total skills: 129
 - Upstream repositories: 15
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
@@ -48,6 +48,7 @@ CI:
 | forketyfork | [`compose-ui-test-server`](./compose-ui-test-server) | [forketyfork/compose-ui-test-server](https://github.com/forketyfork/compose-ui-test-server) |
 | Vercel | [`composition-patterns`](./composition-patterns) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Kotlin | [`configuration-properties-profiles-kotlin-safe`](./configuration-properties-profiles-kotlin-safe) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
+| JetBrains | [`debugging-code`](./debugging-code) | JetBrains |
 | Kotlin | [`dependency-conflict-resolver`](./dependency-conflict-resolver) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | runkids | [`devcontainer`](./devcontainer) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`doc`](./doc) | [openai/skills](https://github.com/openai/skills) |
@@ -116,6 +117,7 @@ CI:
 | Kotlin | [`project-context-ingestion`](./project-context-ingestion) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | Vercel | [`react-best-practices`](./react-best-practices) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Vercel | [`react-native-skills`](./react-native-skills) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
+| JetBrains | [`refactoring-code`](./refactoring-code) | JetBrains |
 | OpenAI | [`render-deploy`](./render-deploy) | [openai/skills](https://github.com/openai/skills) |
 | Kotlin | [`schema-migration-planner`](./schema-migration-planner) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | OpenAI | [`screenshot`](./screenshot) | [openai/skills](https://github.com/openai/skills) |
