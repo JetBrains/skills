@@ -8,65 +8,40 @@ metadata:
 
 # Code Refactoring
 
-Rider/ReSharper-driven semantic refactorings across solutions opened in Rider. Each tool resolves the target through the IDE's reference index and rewrites every affected site — language-aware usages such as `nameof`, XML-doc `<see cref>`, XAML `x:Name`, Razor, C++/Unreal references, and ordinary references that grep cannot resolve — instead of a grep + text replace.
+Rider/ReSharper semantic refactorings on a solution open in Rider. Each tool resolves the target through the IDE index and rewrites **every** reference — `nameof`, `<see cref>`, XAML/Razor bindings, C++/Unreal — in one call. Always prefer the tool over a text edit: grep-and-replace *looks* done but silently misses these and leaves the solution broken.
 
-## Invoking a tool
+## Invoke a tool
 
-Always call a refactoring tool **through `execute_tool`** — direct calls are not routed:
+Call through `execute_tool` — the first token is the exact tool name, then `--flag value` pairs. Map each refactor to exactly one tool and issue it directly; the required flags are below, so no lookup is needed first.
 
 ```
-execute_tool(command="<tool> --arg value [--flag true]")
+execute_tool(command="rename_refactoring --filePath API/Services/OrderService.cs --symbolName OrderService --newName OrderProcessor")
 ```
 
-[reference/tools.md](reference/tools.md) lists every available tool; the linked `reference/tools/<tool>.md` gives the exact parameters, response shape, outcomes, and error kinds for the one tool you are about to call. Read only that one — do not pre-load the whole tree.
+| Refactor | Tool | Required flags |
+|---|---|---|
+| Rename a symbol + all usages | `rename_refactoring` | `--filePath --symbolName --newName` |
+| Change a method signature (add/remove/reorder params) | `change_api_signature` | `--filePath --methodName --parameters` |
+| Move a type to another namespace | `move_type_to_namespace` | `--filePath --typeName --targetNamespace` |
+| Sync namespaces to folders | `reorganize_namespaces` | `--scope` |
+| Delete a symbol only if unused | `safe_delete` | `--filePath --symbolName` |
+| Extract an interface | `extract_interface` | `--filePath --typeName --interfaceName --members` |
+| Extract a base class | `extract_base_class` | `--filePath --typeName --baseClassName --members` |
+| Extract a method (C# only) | `extract_method` | `--filePath --startLine --endLine --methodName` |
 
-## Shared rules
+- `--symbolName`/`--typeName` accept `Name` or `Type.Member`. Every tool also takes `--preview true` (analysis only, no writes) — add it first for public-API or many-call-site changes, then re-issue without it to apply.
+- `change_api_signature`: **always** pass a **bare** `--methodName` (a qualified `Type.Member` can report "not found") **and** `--declaringType <FullyQualifiedType>` on the very first call — don't wait for an `ambiguous_method` error; the method is usually on an interface/impl pair, and `--declaringType` is harmless when it isn't. `--parameters` is a single-quoted JSON array = the **complete** new parameter list in order: an existing name is kept/moved, an omitted one is removed, a new name needs `type` (and optional `defaultValue` inserted at call sites). Disambiguate remaining overloads with `--currentSignature '["int","string"]'` (the CURRENT parameter types).
+- `extract_interface`/`extract_base_class` `--members` is a single-quoted JSON array of member names, e.g. `'["IsMatch","Merge"]'` — not a comma-separated list.
+- A multi-part request ("rename `X` **and** move it to `Y`") is one tool per step, in sequence — never folded into one call.
+- Only for a tool not in the table, or a genuinely unclear parameter, read `reference/tools/<tool>.md` once (index: `reference/tools.md`). There is no `--describe`.
 
-1. **Prefer the MCP tool.** It resolves references semantically across the solution; a text edit cannot. On any error you cannot fix by adjusting the input, or when `execute_tool` is unavailable, fall back to a text-based edit.
-2. **Trust the success signal.** When a tool reports success, do not re-read the mutated files to verify. When a tool reports a count of touched/affected sites, a value of **1** for a type, method, property, field, or namespace is suspicious (declaration only, no callers) — surface it to the user.
-3. **Do not retry blindly.** Adjust the arguments (query, name, file path, namespace, member selection) between calls; a second identical call fails the same way.
-4. **Argument hygiene.** Parameter names are **camelCase** — hyphenated variants like `--new-name` are rejected. Pass real values or omit optional parameters entirely; never encode an omitted value with a placeholder such as `""`, `"/"`, `"__omit__"`, or a fake path. Treat file paths and identifiers as opaque: copy them from `search_*` / `get_symbol_info` output (solution-relative, `/` separators) rather than synthesizing them.
-5. **Library / external symbols cannot be refactored** — the change must be made upstream. Confirm with the user.
+## Rules
 
-## Preview before applying
+1. **Use the tool; never hand-edit or fall back before a real call has run.** `Missing required parameters: …` (add them from the table), `Tool '<x>' not found` (wrong name — copy from the table), and conflict/ambiguous responses are all **fixable input mistakes** — correct the argument and retry. Fall back to a text edit only if `execute_tool` isn't in your toolset, or a call actually ran and failed in a way no input change can fix.
+2. **Trust the success signal — never verify, never build.** On success the response's `touched`/`affects`/`files` counts **are** the confirmation. Do **not** re-read files, re-run `grep`/`rg`, diff the tree, or run the build/tests "to catch fallout" — a build never changes an already-applied refactor, it only burns tokens. Build or test **only** if the user explicitly asked. The one thing worth surfacing: a count of **1** for a type/method/property/field/namespace (declaration only, no callers).
+3. **Don't retry blindly** — change an argument between calls. Flags are camelCase; pass real values or omit optional ones (no `""`/`"/"`/fake-path placeholders), and copy paths and names verbatim from `search_*` / `get_symbol_info`.
+4. **Library / external symbols can't be refactored** — surface to the user; the change must be made upstream.
 
-When a tool offers an analysis-only mode — rename's `--preview true` (the older `--dryRun` is a deprecated alias) returns the blast radius in `affects` without mutating files — use it first for:
+## Conflicts, ambiguity, limits
 
-- public / protected API changes;
-- targets with many call sites or cross-language references (XAML, Razor, C++/Unreal, `<see cref>`);
-- any change where the user signalled hesitation.
-
-Audit `affects`, then re-issue without `--preview` to apply. Preview resolves the symbol and counts usages only — it does **not** run conflict analysis, so a clean preview can still come back with conflicts on apply. Which tools expose an analysis mode is documented per tool in the reference; a tool without one (e.g. a namespace move) applies directly and reports no blast-radius counts, so for a high-impact call narrate what you are about to change before issuing it.
-
-## Conflicts and ambiguity
-
-Tools that rewrite or remove use sites (rename, safe-delete, the extract family) can refuse the operation and report **conflicts**; a symbol query can also match more than one candidate (**ambiguous**). Both come back in the tool's response — see its reference file for the exact fields. A non-empty `conflicts` list always means **no files were touched**.
-
-Each conflict entry is `{kind, file, context}`: `kind` mirrors ReSharper's `ConflictType` (snake_case); `context` is the engine's localized description; `file` is the first occurrence's path, or `null` for a textual-only conflict or a clash with a compiled-only symbol.
-
-| Kind | Meaning | Action |
-|------|---------|--------|
-| `same_name_conflict` | New name collides with an existing member in the same scope. | Pick a different name and retry. |
-| `default_element_conflict` | Generic element-level conflict without a more specific category. | Read `context`; if it names a colliding member, treat like `same_name_conflict`, else escalate. |
-| `cannot_update_usage_conflict` | A call site can't be rewritten safely — downstream code would break. | Escalate to user; do not auto-retry. |
-| `cannot_remove`, `cannot_delete_safely`, `cannot_inline_usage_conflict`, `will_be_removed` | Engine refuses to remove/delete/inline/rewrite a use site. | Escalate to user; do not auto-retry. |
-| `not_accessible` | The symbol becomes invisible from one or more use sites after the change. | Escalate to user — a visibility regression. |
-| `will_be_made_public` | Access widens as a side-effect (e.g. promoted from private). | Narrate the trade-off to the user before retrying. |
-| `hierarchy_conflict` | Override/implementation hierarchy clashes with the result. | Escalate to user; cross-type effect. |
-| `text_only`, `default_conflict`, `invalid` | Generic textual conflict the engine couldn't categorise structurally. | Read `context`; decide from the message. |
-
-Escalate to the user (instead of auto-deciding) when there are more than 5 conflicts, or any entry is `cannot_update_usage_conflict`, `cannot_remove`, `cannot_delete_safely`, `cannot_inline_usage_conflict`, `will_be_removed`, `not_accessible`, or `hierarchy_conflict`. For a rename, also escalate when `affects.callSites == 0` for a public/protected symbol — it usually means the query resolved to the wrong target.
-
-For **ambiguous** matches, each candidate carries `name`, `kind`, `fqn`, `file`, and `line`. Re-issue with a more specific query — a fully qualified path like `Namespace.Type.Method`, or `Type._field` for a private member (bare short-name lookup prioritises type-level entries and misses private fields/methods). The candidate list is capped at 5; if you see 5, the query is too broad — narrow it rather than expecting the full set.
-
-## Known limitations
-
-These hold across the toolset and are not reported in tool output:
-
-- **String and comment occurrences** of an old name or namespace are not updated. Fix them with a regular edit pass afterward.
-- **XML-doc `<see cref>` references**: a method rename rewrites `<see cref="Type.Method(int, int)"/>` to `<see cref="NewName"/>`, dropping the containing type and parameter list. Surface to the user after method renames and offer a separate edit pass.
-- **Moving a type does not move its file** — only the namespace declaration and references change. If the user also wants the file relocated to match, do that as a separate file operation.
-
-## Tool reference
-
-[reference/tools.md](reference/tools.md) is the auto-generated index of every tool in the Rider refactoring toolset, each entry linking to its full parameter and response contract. It is regenerated from the live MCP descriptors, so it — not this file — is the source of truth for tool names, signatures, and response shapes. This skill carries only the workflow and judgment the contracts don't.
+A non-empty `conflicts` list means **no files changed** (except `reorganize_namespaces`, whose conflicts are advisory and still apply). An `ambiguous`/`candidates` list means the name matched several symbols — narrow it (`Type.Member`, or the current overload types). Full conflict-kind handling, escalation thresholds, and known gaps (strings/comments, `<see cref>`, file-not-moved, call-site reflow) are in [reference/conflicts.md](reference/conflicts.md) — read it only when a response actually contains conflicts.
