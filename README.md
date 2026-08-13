@@ -6,8 +6,8 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 129
-- Upstream repositories: 15
+- Total skills: 137
+- Upstream repositories: 16
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
 ## Security Scanning
@@ -42,6 +42,7 @@ CI:
 | Anthropic | [`canvas-design`](./canvas-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | runkids | [`changelog`](./changelog) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | Kotlin | [`ci-cd-containerization-advisor`](./ci-cd-containerization-advisor) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
+| Neon | [`claimable-postgres`](./claimable-postgres) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
 | runkids | [`cli-e2e-test`](./cli-e2e-test) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`cloudflare-deploy`](./cloudflare-deploy) | [openai/skills](https://github.com/openai/skills) |
 | runkids | [`codebase-audit`](./codebase-audit) | [runkids/skillshare](https://github.com/runkids/skillshare) |
@@ -100,6 +101,13 @@ CI:
 | Anthropic | [`mcp-builder`](./mcp-builder) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Google Chrome | [`modern-web-guidance`](./modern-web-guidance) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
 | OpenAI | [`netlify-deploy`](./netlify-deploy) | [openai/skills](https://github.com/openai/skills) |
+| Neon | [`neon`](./neon) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-ai-gateway`](./neon-ai-gateway) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-functions`](./neon-functions) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-object-storage`](./neon-object-storage) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-postgres`](./neon-postgres) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-postgres-branches`](./neon-postgres-branches) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
+| Neon | [`neon-postgres-egress-optimizer`](./neon-postgres-egress-optimizer) | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) |
 | OpenAI | [`notion-knowledge-capture`](./notion-knowledge-capture) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-meeting-intelligence`](./notion-meeting-intelligence) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-research-documentation`](./notion-research-documentation) | [openai/skills](https://github.com/openai/skills) |
