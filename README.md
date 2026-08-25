@@ -6,8 +6,8 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 129
-- Upstream repositories: 15
+- Total skills: 130
+- Upstream repositories: 16
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
 ## Security Scanning
@@ -35,6 +35,7 @@ CI:
 
 | Author | Skill | Repository |
 | --- | --- | --- |
+| Aeon | [`aeon`](./aeon) | [aeonfun/aeon](https://github.com/aeonfun/aeon) |
 | Anthropic | [`algorithmic-art`](./algorithmic-art) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthony Fu | [`antfu`](./antfu) | [antfu/skills](https://github.com/antfu/skills) |
 | Vercel | [`antfu-web-design-guidelines`](./antfu-web-design-guidelines) | [antfu/skills](https://github.com/antfu/skills) |
