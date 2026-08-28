@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Baseline"
+  short_description: "Discover, validate, or draft project DESIGN.md"
+  default_prompt: "Use $design-baseline to inspect this project's existing UI and establish a confirmed DESIGN.md baseline before adding a new page."

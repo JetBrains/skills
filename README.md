@@ -6,8 +6,8 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 129
-- Upstream repositories: 15
+- Total skills: 137
+- Upstream repositories: 16
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
 ## Security Scanning
@@ -48,8 +48,11 @@ CI:
 | forketyfork | [`compose-ui-test-server`](./compose-ui-test-server) | [forketyfork/compose-ui-test-server](https://github.com/forketyfork/compose-ui-test-server) |
 | Vercel | [`composition-patterns`](./composition-patterns) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Kotlin | [`configuration-properties-profiles-kotlin-safe`](./configuration-properties-profiles-kotlin-safe) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
+| Bandersnatch0x | [`craft-guard`](./craft-guard) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | JetBrains | [`debugging-code`](./debugging-code) | JetBrains |
 | Kotlin | [`dependency-conflict-resolver`](./dependency-conflict-resolver) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
+| Bandersnatch0x | [`design-baseline`](./design-baseline) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
+| Bandersnatch0x | [`design-playbook`](./design-playbook) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | runkids | [`devcontainer`](./devcontainer) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | OpenAI | [`doc`](./doc) | [openai/skills](https://github.com/openai/skills) |
 | Anthropic | [`doc-coauthoring`](./doc-coauthoring) | [anthropics/skills](https://github.com/anthropics/skills) |
@@ -99,6 +102,7 @@ CI:
 | forketyfork | [`managing-youtrack`](./managing-youtrack) | [forketyfork/agentic-skills](https://github.com/forketyfork/agentic-skills) |
 | Anthropic | [`mcp-builder`](./mcp-builder) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Google Chrome | [`modern-web-guidance`](./modern-web-guidance) | [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) |
+| Bandersnatch0x | [`native-craft`](./native-craft) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | OpenAI | [`netlify-deploy`](./netlify-deploy) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-knowledge-capture`](./notion-knowledge-capture) | [openai/skills](https://github.com/openai/skills) |
 | OpenAI | [`notion-meeting-intelligence`](./notion-meeting-intelligence) | [openai/skills](https://github.com/openai/skills) |
@@ -118,6 +122,7 @@ CI:
 | Vercel | [`react-best-practices`](./react-best-practices) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Vercel | [`react-native-skills`](./react-native-skills) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | JetBrains | [`refactoring-code`](./refactoring-code) | JetBrains |
+| Bandersnatch0x | [`reference-intake`](./reference-intake) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | OpenAI | [`render-deploy`](./render-deploy) | [openai/skills](https://github.com/openai/skills) |
 | Kotlin | [`schema-migration-planner`](./schema-migration-planner) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | OpenAI | [`screenshot`](./screenshot) | [openai/skills](https://github.com/openai/skills) |
@@ -145,10 +150,13 @@ CI:
 | OpenAI | [`transcribe`](./transcribe) | [openai/skills](https://github.com/openai/skills) |
 | Anthony Fu | [`tsdown`](./tsdown) | [antfu/skills](https://github.com/antfu/skills) |
 | Anthony Fu | [`turborepo`](./turborepo) | [antfu/skills](https://github.com/antfu/skills) |
+| Bandersnatch0x | [`ui-evaluator`](./ui-evaluator) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
+| Bandersnatch0x | [`ui-picker`](./ui-picker) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | runkids | [`ui-website-style`](./ui-website-style) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | Anthony Fu | [`unocss`](./unocss) | [antfu/skills](https://github.com/antfu/skills) |
 | runkids | [`update-docs`](./update-docs) | [runkids/skillshare](https://github.com/runkids/skillshare) |
 | Kotlin | [`upgrade-breaking-change-navigator`](./upgrade-breaking-change-navigator) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
+| Bandersnatch0x | [`ux-spec`](./ux-spec) | [Bandersnatch0x/design-playbook](https://github.com/Bandersnatch0x/design-playbook) |
 | OpenAI | [`vercel-deploy`](./vercel-deploy) | [openai/skills](https://github.com/openai/skills) |
 | Vercel | [`vercel-deploy-claimable`](./vercel-deploy-claimable) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Vercel | [`vercel-labs-web-design-guidelines`](./vercel-labs-web-design-guidelines) | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
