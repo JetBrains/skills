@@ -1,0 +1,3 @@
+# Dataverse SDK + env loading (used by the specialist dv-data / dv-query skills once unpacked)
+PowerPlatform-Dataverse-Client==1.0.1
+python-dotenv==1.2.4
