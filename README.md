@@ -6,7 +6,7 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 129
+- Total skills: 133
 - Upstream repositories: 15
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
@@ -94,7 +94,11 @@ CI:
 | Kotlin | [`kotlin-spring-proxy-compatibility`](./kotlin-spring-proxy-compatibility) | [Kotlin/kotlin-backend-agent-skills](https://github.com/Kotlin/kotlin-backend-agent-skills) |
 | JetBrains | [`kotlin-tooling-agp9-migration`](./kotlin-tooling-agp9-migration) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
 | JetBrains | [`kotlin-tooling-cocoapods-spm-migration`](./kotlin-tooling-cocoapods-spm-migration) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
+| singleton11 | [`kotlin-tooling-gradle-to-kotlin-toolchain-plugin`](./kotlin-tooling-gradle-to-kotlin-toolchain-plugin) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
+| singleton11 | [`kotlin-tooling-gradle-to-kotlin-toolchain-project`](./kotlin-tooling-gradle-to-kotlin-toolchain-project) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
 | JetBrains | [`kotlin-tooling-java-to-kotlin`](./kotlin-tooling-java-to-kotlin) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
+| singleton11 | [`kotlin-tooling-kotlin-toolchain`](./kotlin-tooling-kotlin-toolchain) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
+| singleton11 | [`kotlin-tooling-kotlin-toolchain-plugin-authoring`](./kotlin-tooling-kotlin-toolchain-plugin-authoring) | [Kotlin/kotlin-agent-skills](https://github.com/Kotlin/kotlin-agent-skills) |
 | OpenAI | [`linear`](./linear) | [openai/skills](https://github.com/openai/skills) |
 | forketyfork | [`managing-youtrack`](./managing-youtrack) | [forketyfork/agentic-skills](https://github.com/forketyfork/agentic-skills) |
 | Anthropic | [`mcp-builder`](./mcp-builder) | [anthropics/skills](https://github.com/anthropics/skills) |
