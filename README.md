@@ -6,8 +6,8 @@ Each skill lives in its own top-level directory. Every `SKILL.md` keeps an exact
 
 ## Summary
 
-- Total skills: 129
-- Upstream repositories: 15
+- Total skills: 130
+- Upstream repositories: 16
 - Attribution rule: the `Author` column uses the explicit skill front matter when present; otherwise it falls back to the upstream maintainer or organization.
 
 ## Security Scanning
@@ -38,6 +38,7 @@ CI:
 | Anthropic | [`algorithmic-art`](./algorithmic-art) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthony Fu | [`antfu`](./antfu) | [antfu/skills](https://github.com/antfu/skills) |
 | Vercel | [`antfu-web-design-guidelines`](./antfu-web-design-guidelines) | [antfu/skills](https://github.com/antfu/skills) |
+| AppDeploy | [`appdeploy`](./appdeploy) | [AppDeploy-AI/skills](https://github.com/AppDeploy-AI/skills) |
 | Anthropic | [`brand-guidelines`](./brand-guidelines) | [anthropics/skills](https://github.com/anthropics/skills) |
 | Anthropic | [`canvas-design`](./canvas-design) | [anthropics/skills](https://github.com/anthropics/skills) |
 | runkids | [`changelog`](./changelog) | [runkids/skillshare](https://github.com/runkids/skillshare) |
